@@ -1,3 +1,18 @@
+language: ruby
+rvm:
+  - 2.5.1
+
+before_deploy:
+      # Set up git user name and tag this commit
+      - git config --local user.name "bitfurry"
+      - git config --local user.email "bitfurry@gmail.com"
+      - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+
+deploy:
+  provider: releases
+  file: "FILE TO UPLOAD"
+  skip_cleanup: true
+
 addons:
   artifacts: true
 env:

@@ -1,11 +1,7 @@
 language: ruby
 rvm:
-<<<<<<< HEAD
   - 2.3.0
 
-=======
-- 2.2.3
->>>>>>> some try
 before_deploy:
 - git config --local user.name "bitfurry"
 - git config --local user.email "bitfurry@gmail.com"
@@ -19,4 +15,3 @@ deploy:
     repo: bitfurry/den_setup
 addons:
   artifacts: true
->>>>>>> some try

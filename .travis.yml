@@ -1,17 +1,22 @@
 language: ruby
 rvm:
+<<<<<<< HEAD
   - 2.3.0
 
+=======
+- 2.2.3
+>>>>>>> some try
 before_deploy:
-      # Set up git user name and tag this commit
-      - git config --local user.name "bitfurry"
-      - git config --local user.email "bitfurry@gmail.com"
-      - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
-
+- git config --local user.name "bitfurry"
+- git config --local user.email "bitfurry@gmail.com"
+- git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 deploy:
   provider: releases
-  file: "hello_world.rb"
-  api_key: "TZNvCg8S/fmh95VQxDszc3o86AD+PeYWNxdt3D617PRpWFxzCnjrCSCQykcW2IEVOV1AXkJusXUMieuYqEL+po5Yf5/Fwpn5tRNDC5ZkYUWIMNW3L5ih60UtQp9VzjnwJ8AJYzF5i2UZdiWM6APjPbqtLEU6BajOw+Kymm7neHF/CKSF5V8usKiwpu4Lir3kORVLvBf173PWQ8LOGNeMMGw2JL0NGl5Y1M+TCFJhY9hRUJTLANL44w5XpwELL4njLM13nORk5sVWVXbNxK7DEvRpKSQNjCHKVjgAKq2nKmHH6RvV69rRxi+5qsooQXqbmeNl1bQXrrxwx6LlYZn54aiJbkAiuMwL73rJVFc/DT1QgkDrlH1NF1lnUdepOWfW+rreJVGXkovkrdfKvA0CUk1MMhs40GoDPCrt+sHrXfoJcg9ndXcNaVEh6fhakaDiH08l2YDfJxB1uMGsmDD5PfNLW9xgtLG09foTvwOVq+X0cNSYFnNxZ25BSVDA8Pz1qTaEE3t9KvfxjwKM07IbrnPwBoxGFZAWk0XL99hmoI7ekPDz3KUOvsIU2H9IP5kxaF/K5Wv1xwt7s/Tzns54HExB9JmrLfZjsYxiOfTwLBUSOCDQN6mlNsrOVz2331iTwThme0ZmVxM9umz6xHY91nqTb5ZGepgx6zfSR3NrN7A="
-  skip_cleanup: true
+  api_key:
+    secure: rrI195WibpGwf/T5MTzrDlNeDN315wUefOVXBDj7+70dG7z0ds30ZRJi5PZ1lZfa5kMM5Lg6uvU3af5DcLMv568kwWEQ87rhkhJ9O3wH3Tf1KAyc2aaYv4MsHVZ0vLRnbvlxZq/5nlAZxNEwuScm/OzwGytjzqxKIfVUZVlPY72H3Bx126oRXgS71FRM1Nrqqa/5gFM4zKJEnWlmOxddRD2XTslJTMhw7294Gk3SqB115NdN6dIBSM2fbGjScshRNf4EmTSjhFW9fsXaJiTRA+UJSxPZytpe+RcWNPVTcuSKqEazkqXWWkMJGqXiCzwpRaOvBELee9nlTRDbQVVBP9X08TVSCh6Oav3qYu3WlIMKMt3SBqnJ4Iuq+wTRvUMFWsUsENaBfQOsio/Snsll/wQ1e5+VgvFo9Gdf72oHPXy4fP7Si/qeO1aTBJzxFwz7WOFjkyFTVuoWH9ecRs6qQb6jpJrOQp6xLxZOuf5gY8c8ZFyQVKkRzA+93L/LYF3UGnRwWNFdbfIEQA7p2V2CdQRUcdcsCd8ZFmMJWqO0ITDL1+2RqRhTvfpsFwSRSQtYbTa4Yo6P4JAUdRxks/NFOZKfw3J7mc8X1uDD7BEje1dUqDHSkGC/cTH/PGDFg0kDDOXVGlU5jeHCBMVWC1qixw7+4eazt/xcewZ32nRh2iQ=
+  file: hello_world.rb
   on:
-      branch: master
+    repo: bitfurry/den_setup
+addons:
+  artifacts: true
+>>>>>>> some try
